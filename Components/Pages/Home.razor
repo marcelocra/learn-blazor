@@ -1,0 +1,21 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<div class="flex flex-col gap-3 p-3">
+
+  <input class="input input-bordered" @oninput="InputChanged" />
+  <button class="btn" @onclick="() => message = string.Empty">Clear</button>
+
+  <p class="text-black">@message</p>
+</div>
+
+@code {
+  string message = "";
+
+  void InputChanged(ChangeEventArgs e)
+  {
+    message = e.Value?.ToString() ?? string.Empty;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "BlazorApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw": "tailwindcss",
+    "tw:base": "pnpm run tw -i ./wwwroot/app.css -o ./wwwroot/app.min.css",
+    "tw:dev": "pnpm run tw:base --watch",
+    "tw:prod": "pnpm run tw:dev --minify",
+    "dotnet:dev": "dotnet watch",
+    "dev": "run-p -l dotnet:dev tw:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "10.4.20",
+    "daisyui": "4.12.14",
+    "npm-run-all2": "^6.2.0",
+    "postcss": "8.4.47",
+    "postcss-cli": "11.0.0",
+    "tailwindcss": "3.4.14"
+  }
+}
